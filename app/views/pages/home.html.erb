@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <div class="container">
+  <div id="one", class="row">
+  <br>
+  <link type="text/css" rel="stylsheet" href="pages.sccs">
+  <h1 align="center"><strong>My resume</strong> <%= link_to "print", "javascript:window.print()", class: "btn btn-primary btn-lg" %></h1>
+  <br>
+  <br>
+  </div>
+  </div>
+</head>
+
+<body>
+  <div class="container">
+  <div class="row">
+  <link type="text/css" rel="stylsheet" href="pages.sccs">
+  
+  <div class="col-md-2"></div>
+
+  <div class="col-md-4">
+    <li><h2>About me</h2>
+      <ul>
+        <p>Name:   <strong>楊雅文</strong></p>
+        <p>E-mail: <strong>wen1123wen@gmail.com</strong></p>
+        <p>Birth:  <strong>1988/11/23</strong></p>
+        <p>Interest: <strong>weight training</strong></p>
+      </ul>
+    </li>
+    
+    <li><h2>Work experience</h2>
+      <ul>
+        <p>Integrated Bio – </p>
+        <ul><p> <strong>Sales representative</strong></p></ul>
+        <p>Academia Sinica - </p>
+        <ul><p><strong>Research assistant of Institute of Chemistry</strong></p></ul>
+      </ul>
+    </li>
+
+    <li><h2>Education</h2>
+      <ul>
+        <strong><p>National Chung Hsing University</p></strong>
+        <ul><p>  Master of Biotechnology</p></ul>
+        <strong><p>Tzu Chi University</p></strong>
+        <ul><p>Master of Biotechnology</p></ul>
+      </ul>
+    </li>
+
+
+    <li><h2>Skill</h2>
+      <ul>
+        <p>ROR, HTML, CSS, git, bootstrap, heroku</p>
+      </ul>
+    </li>
+  </div>
+  
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <%= image_tag("wendy_yang.JPG") %>
+    
+    <li id="two"><h2>Projects</h2>
+      <ul>
+        <p>My github account:</p>
+        <p><%= link_to "wendyburger", "https://github.com/wendyburger" %></p>
+      </ul>
+        
+      <ul>
+        <p>Projects on heroku:</p>
+        <p><%= link_to "eStuck", "http://apricot-sundae-4868.herokuapp.com/" %></p>
+        <p><%= link_to "Stukdo", "http://glacial-taiga-6538.herokuapp.com/" %></p>
+        <p><%= link_to "Stuckbook", "http://quiet-forest-3827.herokuapp.com/" %></p>
+      </ul>
+    </li>
+  </div>
+  
+  </div>
+  </div>
+</body>
+</html>
+
+
