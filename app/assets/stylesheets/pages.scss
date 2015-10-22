@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  margin-left: 1px;
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
 }
+
 
 
 #one {
@@ -38,4 +41,6 @@ img {
   margin: 10px;
   margin-right: 120px;
 }
+
+
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <div class="container">
+<div class="container">
   <div id="one", class="row">
   <br>
   <link type="text/css" rel="stylsheet" href="pages.sccs">
@@ -9,17 +10,13 @@
   <br>
   <br>
   </div>
-  </div>
+</div>
 </head>
 
 <body>
-  <div class="container">
-  <div class="row">
+<div class="container">
+  <div style="width:380px;height:60px;float:left;margin-left:50px">
   <link type="text/css" rel="stylsheet" href="pages.sccs">
-  
-  <div class="col-md-2"></div>
-
-  <div class="col-md-4">
     <li><h2>About me</h2>
       <ul>
         <p>Name:   <strong>楊雅文</strong></p>
@@ -54,29 +51,29 @@
       </ul>
     </li>
   </div>
-  
-  <div class="col-md-1"></div>
-  <div class="col-md-3">
+
+
+
+  <div style="width:300px;height:60px;float:right">
+    <link type="text/css" rel="stylsheet" href="pages.sccs">
     <%= image_tag("wendy_yang.JPG") %>
-    
-    <li id="two"><h2>Projects</h2>
-      <ul>
-        <p>My github account:</p>
-        <p><%= link_to "wendyburger", "https://github.com/wendyburger" %></p>
-      </ul>
+      <li id="two"><h2>Projects</h2>
+        <ul>
+          <p>My github account:</p>
+          <p><%= link_to "wendyburger", "https://github.com/wendyburger" %></p>
+        </ul>
         
-      <ul>
-        <p>Projects on heroku:</p>
-        <p><%= link_to "eStuck", "http://apricot-sundae-4868.herokuapp.com/" %></p>
-        <p><%= link_to "Stukdo", "http://glacial-taiga-6538.herokuapp.com/" %></p>
-        <p><%= link_to "Stuckbook", "http://quiet-forest-3827.herokuapp.com/" %></p>
-      </ul>
-    </li>
+        <ul>
+          <p>Projects on heroku:</p>
+          <p><%= link_to "eStuck", "http://apricot-sundae-4868.herokuapp.com/" %></p>
+          <p><%= link_to "Stukdo", "http://glacial-taiga-6538.herokuapp.com/" %></p>
+          <p><%= link_to "Stuckbook", "http://quiet-forest-3827.herokuapp.com/" %></p>
+        </ul>
+     </li>
   </div>
-  
-  </div>
-  </div>
+</div>
 </body>
+
 </html>
 
 
