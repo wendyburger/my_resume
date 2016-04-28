@@ -1,82 +1,149 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<div class="container">
-  <div id="one", class="row">
-  <br>
-  <link type="text/css" rel="stylsheet" href="pages.sccs">
-  <h1 align="center"><strong>My resume</strong> <%= link_to "print", "javascript:window.print()", class: "btn btn-primary btn-lg" %></h1>
-  <br>
-  <br>
-  </div>
-</div>
-</head>
-
-<body>
-<link type="text/css" rel="stylsheet" href="pages.sccs">
-<div class="container">
-  <div style="width:380px;height:60px;float:left;margin-left:50px">
-  
-    <li><h2>About me</h2>
-      <ul>
-        <p>Name:   <strong>楊雅文</strong></p>
-        <p>E-mail: <strong>wen1123wen@gmail.com</strong></p>
-        <p>Birth:  <strong>1988/11/23</strong></p>
-        <p>Interest: <strong>weight training</strong></p>
-      </ul>
-    </li>
+<div class="profile-background">
+  <div class="row">
     
-    <li><h2>Work experience</h2>
-      <ul>
-        <p>Integrated Bio – </p>
-        <ul><p> <strong>Sales representative</strong></p></ul>
-        <p>Academia Sinica - </p>
-        <ul><p><strong>Research assistant of Institute of Chemistry</strong></p></ul>
-      </ul>
-    </li>
+    <div class="col-md-7">
+      <div class="title">
+        <h1>楊雅文 / Wendy</h1>  
+      </div>      
+      <div class="intro">
+        <h2>關於我</h2>
+        <h5>中興大學生物科技學研究所畢業</h5>
+        <h5>中央研究院化學所研究助理</h5>
+        <h5>生技公司業務專員</h5>
+      </div>
+      <div class="button-area">
+        <a href="#abc"><button class="btn btn-next">往下看</button></a>
+      </div>
+    </div>
 
-    <li><h2>Education</h2>
-      <ul>
-        <strong><p>National Chung Hsing University</p></strong>
-        <ul><p>  Master of Biotechnology</p></ul>
-        <strong><p>Tzu Chi University</p></strong>
-        <ul><p>Master of Biotechnology</p></ul>
-      </ul>
-    </li>
-
-
-    <li><h2>Skill</h2>
-      <ul>
-        <p>ROR, TDD, HTML, CSS, git, bootstrap, heroku, jQuery, Sinatra</p>
-      </ul>
-    </li>
+    <div class="col-md-5">
+      <%= image_tag 'wendy_yang.jpg', class:'photo' %>
+    </div>
+  
   </div>
-
-
-
-  <div style="width:300px;height:60px;float:right">
-    <link type="text/css" rel="stylsheet" href="pages.sccs">
-    <%= image_tag("wendy_yang.JPG") %>
-      <li id="two"><h2>Projects</h2>
-        <ul>
-          <p>My github account:</p>
-          <p><%= link_to "wendyburger", "https://github.com/wendyburger" %></p>
-        </ul>
-        
-        <ul>
-          <p>Projects on heroku:</p>
-          <p><%= link_to "eStuck", "http://apricot-sundae-4868.herokuapp.com/" %></p>
-          <p><%= link_to "Stukdo", "http://glacial-taiga-6538.herokuapp.com/" %></p>
-          <p><%= link_to "Stuckbook", "http://quiet-forest-3827.herokuapp.com/" %></p>
-          <p><%= link_to "Blackjack game", "http://tl-blackjackgame.herokuapp.com/" %></p>
-        </ul>
-     </li>
-  </div>
-
 </div>
-</body>
 
-</html>
+<div class="project-background" id='abc'>
+  <div class="row">
+    <div class="text-center">
+      <div class="title">
+        <h3>我的作品集</h3>
+      </div>
+      <div class="intro">
+        <h4><a href="https://github.com/wendyburger">我的Github連結</a></h4>
+        <h4><a href="#">健身論壇網站</a></h4>
+        <h4><a href="#">網路書店</a></h4>
+      </div>
+      <div class='icon'>
+        <%= image_tag '1461844456_Github.png' %>
+        <%= image_tag '1461844232_dumbbell.png' %>
+        <%= image_tag '1461844426_LIBRARY_2.png' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="detail-background">
+  <div class="row">
+    <div class='container'>
+      
+      <div class="col-md-5">
+        <%= image_tag "29629.jpg", class: 'photo' %>
+      </div>
+
+      <div class="col-md-7">
+        <div class='title'>
+          <h3>技術部份(健身論壇網站)</h3>
+        </div>
+
+        <div class="intro">          
+          <h4>一個月內完成有TDD的CRUD健身網站(不使用scaffold)</h4>
+          <h4>(1)使用者功能</h4>
+          <ul>
+            <li>利用crypt, password_digest產生secure password</li>
+            <li>用session儲存user_id(登入、登出)</li>
+            <li>paperclip, amazonS3讓使用者能上傳修改大頭貼照片</li>
+            <li>含有role column 可指派 admin</li>
+            <li>authorization全部自己寫method(在application_controller內)</li>
+          </ul>
+
+          <h4>(2)討鞭文章</h4>
+          <ul>
+            <li>手刻migration、model、controller、view</li>
+            <li>paperclip, amazonS3上傳照片</li>
+            <li>auto_html gem 使使用者能貼youtube link</li>
+            <li>文章下方可以讓使用者討論</li>
+          </ul>
+
+          <h4>(3)分類部位</h4>
+          <ul>
+            <li>只有role == admin才能新增部位</li>
+          </ul>
+
+          <h4>(4)TDD</h4>
+          <ul>
+            <li>使用fabrication、faker製造資料</li>
+            <li>用shoulda-matchers寫model測試(也有include Paperclip::Shoulda::Matchers測試上傳的圖片)</li>
+          </ul>
+
+          <h4>(5)前端</h4>
+          <ul>
+            <li>使用bootstrap再加以進行修改</li>
+            <li>font-awesome產生icon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="function-background">
+  <div class="row">
+    <div class="container">
+
+      <div class="col-md-7">
+        <div class="title">
+          <h3>網站內容</h3>
+        </div>
+        <div class="intro">
+          <h4>使用者功能</h4>
+          <ul>
+            <ul>註冊/修改時可以選擇大頭貼照</ul>
+            <ul>註冊/修改時可以選擇時區</ul>
+            <ul>關於我可以看到使用者發佈的文章及食譜內容</ul>
+          </ul>
+
+          <h4>討鞭文章(Post)</h4>
+          <ul>
+            <ul>文章可以貼上youtube連結產生影片</ul>
+            <ul>文章可以上傳照片</ul>
+          </ul>
+
+          <h4>討論文章(Comment)</h4>
+          <ul>
+            <ul>依部位分類討論文章</ul>
+            <ul>文章下方可以討論</ul>
+          </ul>
+
+          <h4>健身食譜</h4>
+          <ul>
+            <ul>使用者可以上傳食譜照片及作法</ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <%= image_tag "protein_pancake.jpg", class: 'photo' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 

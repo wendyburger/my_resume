@@ -1,0 +1,123 @@
+$main-color: rgb(74, 152, 229);
+$second-color: rgb(208, 228, 248);
+
+hr {
+  display: block;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  border-width: 2px;
+}
+
+.profile-background {
+  
+  height: 100vh;
+  width: 100%;
+  padding-top: 25vh;
+  background-color: $main-color;
+
+  .title {
+    color: white;
+    text-align: right;
+    margin-bottom: 2em;
+  }
+
+  .intro {
+    color: $second-color;
+    text-align: right;
+    margin-bottom: 2em;
+  }
+
+  .button-area {
+    text-align: right;
+    .btn-next {
+      background-color: white;
+      color: $main-color;
+      font-size: 2em;
+      padding: 0.5em 2em;
+      border-radius: 0.2em;
+      &:hover{
+        background-color: $second-color;
+      }
+    }
+  }
+
+  .photo {
+      height: 50vh;
+  }
+}
+
+.project-background {
+  background-color: rgb(251,251,251);
+  height: 50vh;
+  weight: 100vh;
+  padding-top: 10vh;
+
+  .title {
+    color: rgb(130,130,130);
+    margin-bottom: 2em;
+  }
+
+  .intro {
+    color: rgb(130,130,130);
+    margin-bottom: 2em;
+  }
+  
+  .icon {
+    icon-size: 18px;
+    color: gray;
+  }
+}
+
+.detail-background {
+  background-color: rgb(255,255,255);
+  height: 100vh;
+  weight: 100vh;
+  padding-top: 5vh;
+
+  .photo {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    margin: 4em 2em;
+  }
+
+  .title {
+    color: rgb(130,130,130);
+    text-align: left;
+    padding: 0em 4em 1em;
+  }
+
+  .intro {
+    color: rgb(153,153,153);
+    text-align: left;
+    padding: 0em 4em;
+  }
+}
+
+.function-background {
+  background-color: rgb(255,255,255);
+  height: 100vh;
+  weight: 100vh;
+  padding-top: 5vh;
+
+  .title {
+  color: rgb(130,130,130);
+  text-align: right;
+  padding-right: 4em;
+  padding-bottom: 1em;
+  }
+
+  .intro {
+  color: rgb(153,153,153);
+  text-align: right;
+  padding-right: 4em;
+  }
+
+  .photo {
+  height: 50vh;
+  width: 50vh;
+  border-radius: 50%;
+  margin: 4em 0em 0em 2em;
+  }
+}
+
