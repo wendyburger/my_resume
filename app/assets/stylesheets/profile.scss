@@ -8,6 +8,35 @@ hr {
   border-width: 2px;
 }
 
+ul {
+  list-style-type:none;
+  padding:0px;
+}
+
+@keyframes left-in {
+  from {
+    margin-right: 6em;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0em;
+    opacity: 1;
+  }
+}
+
+@keyframes photo-in {
+  from {
+    opacity: 0;
+    margin-left: 6em;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0em;
+  }
+}
+
+
+
 .profile-background {
   
   height: 100vh;
@@ -19,16 +48,25 @@ hr {
     color: white;
     text-align: right;
     margin-bottom: 2em;
+
+    animation-name: left-in;
+    animation-duration: 1s;
   }
 
   .intro {
     color: $second-color;
     text-align: right;
     margin-bottom: 2em;
+    animation-name: left-in;
+    animation-duration: 1.5s;
+    
   }
 
   .button-area {
     text-align: right;
+    animation-name: left-in;
+    animation-duration: 2s;
+    
     .btn-next {
       background-color: white;
       color: $main-color;
@@ -42,15 +80,24 @@ hr {
   }
 
   .photo {
-      height: 50vh;
+      height: 26.5em;
+      margin-top: 1.5em;
+
+      animation-name: photo-in;
+      animation-duration: 2s;
+      @media screen and (max-width: 769px) {
+        position: absolute;
+        height: 14.5em;
+        right: 78vw;
+        top: -16em;
+      }
+
   }
 }
 
 .project-background {
   background-color: rgb(251,251,251);
-  height: 50vh;
-  weight: 100vh;
-  padding-top: 10vh;
+  padding-top: 5em;
 
   .title {
     color: rgb(130,130,130);
@@ -61,43 +108,35 @@ hr {
     color: rgb(130,130,130);
     margin-bottom: 2em;
   }
-  
+
   .icon {
-    icon-size: 18px;
-    color: gray;
+    margin-bottom: 5em;
   }
 }
 
-.detail-background {
+.myfitness-background {
   background-color: rgb(255,255,255);
-  height: 100vh;
-  weight: 100vh;
   padding-top: 5vh;
 
-  .photo {
-    height: 50vh;
-    width: 50vh;
-    border-radius: 50%;
-    margin: 4em 2em;
+  .myfitness-photo {
+    width: 100%;
   }
 
-  .title {
+  .myfitness-title {
     color: rgb(130,130,130);
     text-align: left;
-    padding: 0em 4em 1em;
+    padding: 0em 4em 1em 0em;
   }
 
-  .intro {
+  .myfitness-intro {
     color: rgb(153,153,153);
     text-align: left;
-    padding: 0em 4em;
+    padding: 0em 4em 1em 0em;
   }
 }
 
 .function-background {
   background-color: rgb(255,255,255);
-  height: 100vh;
-  weight: 100vh;
   padding-top: 5vh;
 
   .title {
@@ -114,10 +153,18 @@ hr {
   }
 
   .photo {
-  height: 50vh;
-  width: 50vh;
-  border-radius: 50%;
-  margin: 4em 0em 0em 2em;
+    width: 100%;
   }
 }
 
+
+.circle-border {
+  width: 100%;
+  border-radius: 50%;
+  border:5px solid rgb(236, 236, 236);
+  overflow: hidden;
+  @media screen and (max-width: 769px){
+    width: 50%;
+    margin: 0 auto;
+  }
+}
